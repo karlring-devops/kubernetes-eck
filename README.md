@@ -1,5 +1,6 @@
-# kubernetes-eck
-Create Full Stack ECK on Kubernetes Cluster
+# kubernetes-eck (requires: cluster-vagrant-kubernetes-nfs)
+
+Create Full Stack Elastic ECK Cluster on Kubernetes. 
 
 ## Instructions
 
