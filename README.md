@@ -16,8 +16,8 @@ Can take upto 15-20mins for all the ECK componnents to initiliase and register w
 
 Full stack ECK on kubernetes generates alot (i mean alot) of stream data on disk in Gib's very quickly.  I suggest after ECK Cluster is ready:
 
-   1) Login to Kibana
-   2) Manage -> https://192.168.7.2:your_kibana-kb-http_NodePort/app/management (login details use script FUNCTION: k8s_get_login_kibana)
+   1) Login to Kibana  (login details use [setup_eck.sh](https://github.com/karlring-devops/kubernetes-eck/blob/main/setup_eck.sh) FUNCTION: k8s_get_login_kibana)
+   2) Manage -> https://192.168.7.2:your_kibana-kb-http_NodePort/app/management 
    3) Index Lifecycle Policies > change Hot /Warm 1mins /Cold 2mins and merge, readonly, re-index etc for:
   
           auditbeat, filebeat, heartbeat, jounalbeat, metricbeat, packetbeat(important)
