@@ -1,6 +1,7 @@
-# kubernetes-eck (requires: [cluster-vagrant-kubernetes-nfs](https://github.com/karlring-devops/cluster-vagrant-kubernetes-nfs))
+# kubernetes ElasticSearch eck Cluster
 
 Create Full Stack ElasticSearch ECK Cluster on Kubernetes. 
+(requires: [cluster-vagrant-kubernetes-nfs](https://github.com/karlring-devops/cluster-vagrant-kubernetes-nfs))
 
 ## Instructions
 
