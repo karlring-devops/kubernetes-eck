@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # /**********************************************/
-# /-- sources: 
+# /-- References: 
 # /**********************************************/
 # /   https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-beat-configuration-examples.html
 # /   https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-elasticsearch.html
@@ -69,21 +69,13 @@ main(){
 		k8s_apply_apmserver
 }
 
+main
 
-remove_eck_all(){
-	for i in `ls -1 *.yaml`
-	do 
-		kubectl delete -f $i
-	done
-}
 
-kill_port_fwds(){
-	#/---- kill port-forwards ----/
-	for p in $(ps -ef | grep kubectl | grep 'port-forward' | awk '{print $2}')
-	do
-		kill -9 ${p}
-	done
-}
+# /---- tools -------/
+remove_eck_all(){ for i in `ls -1 *.yaml`; do  $i; done; }
+kill_port_fwds(){ for p in $(ps -ef | grep kubectl | grep 'port-forward' | awk '{print $2}'); do kill -9 ${p}; done; }
+
 
 # /**********************************************/
 # EOF
