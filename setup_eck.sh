@@ -34,13 +34,14 @@ k8s_get_login_kibana(){
 k8s_apply_metricbeat(){ kubectl apply -f metricbeat_hosts.yaml ; }
   k8s_apply_filebeat(){ kubectl apply -f filebeat_autodiscover.yaml ; }
 
-# #Source: https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-beat-configuration-examples.html
-# wget https://raw.githubusercontent.com/elastic/cloud-on-k8s/1.7/config/recipes/beats/filebeat_autodiscover_by_metadata.yaml
-# kubectl apply -f filebeat_autodiscover_by_metadata.yaml
-# #Source: https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-beat-configuration-examples.html
-# wget https://raw.githubusercontent.com/elastic/cloud-on-k8s/1.7/config/recipes/beats/stack_monitoring.yaml
-# kubectl apply -f stack_monitoring.yaml
-# kubectl scale -n default statefulset elasticsearch-monitoring-es-default --replicas=1
+		# #Source: https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-beat-configuration-examples.html
+		# wget https://raw.githubusercontent.com/elastic/cloud-on-k8s/1.7/config/recipes/beats/filebeat_autodiscover_by_metadata.yaml
+		# kubectl apply -f filebeat_autodiscover_by_metadata.yaml
+		# #Source: https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-beat-configuration-examples.html
+		# wget https://raw.githubusercontent.com/elastic/cloud-on-k8s/1.7/config/recipes/beats/stack_monitoring.yaml
+		# kubectl apply -f stack_monitoring.yaml
+		# kubectl scale -n default statefulset elasticsearch-monitoring-es-default --replicas=1
+
 
   k8s_apply_heartbeat(){ kubectl apply -f heartbeat_es_kb_health.yaml ; }
 k8s_apply_journalbeat(){ kubectl apply -f journalbeat_hosts.yaml ; }
@@ -81,8 +82,8 @@ kill_port_fwds(){ for p in $(ps -ef | grep kubectl | grep 'port-forward' | awk '
 # EOF
 # /**********************************************/
 
-# watch kubectl get apmservers
-# kubectl get pods --selector='apm.k8s.elastic.co/name=apm-server-default'
+		# watch kubectl get apmservers
+		# kubectl get pods --selector='apm.k8s.elastic.co/name=apm-server-default'
 
 
 
