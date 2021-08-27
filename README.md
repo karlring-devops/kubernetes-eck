@@ -35,7 +35,7 @@ Full stack ECK on kubernetes generates alot (i mean alot) of stream data on disk
   
  ## [Index Management] 24x hours of disk index usage 
  
-For major beats installed in the basic the ECK is as below, look at packebeat 10Gib in 24hours! 
+For major beats installed in the basic the ECK is as below, look at packebeat 15Gib in 24hours! 
  
  
   ![Screen Shot 2021-08-27 at 2 05 04 PM](https://user-images.githubusercontent.com/56421115/131105851-1c0af0de-2b6a-4b11-8d02-0614ebe7d6fc.png)
